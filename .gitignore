@@ -1,0 +1,49 @@
+example_env
+__pycache__
+*.pyc
+.env
+.env.*
+!.env.example
+lms/media
+lms/static
+000*
+LMS.postman_collection.json
+
+# BD/
+backups/
+*.pgpass
+.pgpass
+
+# Python / Django
+*.py[cod]
+__pycache__/
+*.log
+*.sqlite3
+db.sqlite3
+
+# Virtualenv
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Django collected/static/media
+staticfiles/
+media/
+
+# Coverage / tests
+.coverage
+htmlcov/
+.pytest_cache/
