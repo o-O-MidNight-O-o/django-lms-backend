@@ -1,30 +1,25 @@
-# LMS Backend (Django + DRF)
+# Django LMS Backend
 
-A Django REST backend for an LMS-style platform (courses, users, quizzes, posts, etc.).
+A Django REST backend for an LMS-style platform (users/auth, courses, content, and related APIs).  
+Built with Django + DRF and designed to be used as the backend service for a frontend client.
 
-## Tech Stack
-- Python / Django (3.2.x)
-- Django REST Framework
+## Key Features
+- REST API built with Django REST Framework
+- Authentication flows (JWT / token-based, depending on configuration)
+- Modular Django apps (users, courses, etc.)
+- Environment-based configuration using `.env` (recommended for secrets)
+- PostgreSQL-ready (can be adapted for other DB engines)
+
+## Repository Notes
+This repository is intended to be safe for public sharing:
+- Secrets are not committed (use `.env` locally)
+- Hostnames and environment-specific settings should be configured via environment variables
+- Backup artifacts (e.g., database credential helper files) must not be included
+
+## Requirements
+- Python 3.10+ (3.11 also OK)
+- pip / virtualenv
 - PostgreSQL (recommended)
-- JWT Auth (SimpleJWT)
-- django-environ for environment variables
-
----
-
-## Project Structure
-- django-lms-backend/
-- lms/
-- manage.py
-- lms/ # Django project settings/urls/asgi/wsgi
-- users/ # Users + auth + OTP flows
- courses/ # Courses endpoints
-...
-requirements.txt
-app.sh # VPS helper script (optional)
-Dockerfile # Basic docker file (needs small adjustment, see below)
-LMS.postman_collection.json
-
----
 
 ## ✅ Setup (Local Development)
 
